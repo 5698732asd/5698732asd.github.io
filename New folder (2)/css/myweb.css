@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: justify;
+}
+header{
+	width: 100%;
+	height: 200px;
+	background-image: url( "../media/bg.png"), url(  "../media/banner.jpg");
+	background-repeat: no-repeat, no-repeat;
+	background-size: contain, cover;
+	font-family: Calibri;
+}
+
+.carousel-item{
+    height: 32rem;
+    left: 10%;
+    width: 80%;
+    background: #000;
+    color: white;
+    position: relative;
+    height: 250px;
+    
+}
+.container{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 50px;
+}
+.overlay-image{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.5;
+   
+}
+.range {
+    display: flex;
+    clear: both;
+    background-color: #333;
+}
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 400px;
+    }
+    .modal-dialog .modal-content {
+        padding: 1rem;
+    }
+}
+.modal-header .close {
+    margin-top: -1.5rem;
+}
+  
+.form-title {
+    margin: -2rem 0rem 2rem;
+}  
+.btn-round {
+    border-radius: 3rem;
+}
+.delimiter {
+    padding: 1rem;
+}
+  
+.social-buttons .btn {
+    margin: 0 0.5rem 1rem;
+}  
+.signup-section {
+    padding: 0.3rem 0rem;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+aside{
+	float:left;
+    font-family: Calibri;
+	background: white;
+	padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    background: url(/media/BG_5.jpg) no-repeat;
+    background-size: cover;
+}
+footer{
+    float: left;
+	padding: 20px;
+	width: 100%;
+	text-align: center;
+	font-family: Calibri;
+	font-size: 40px;
+    color: white;
+    background-color: #000;
+}
+#Nd1{
+   
+    height: 500px;
+    
+}
+#Nd2{
+   
+    height: 500px;
+}
+#Nd3{
+   
+    height: 500px;
+}
+#Nd4{
+    
+    height: 500px;
+}
+.img-fluid:hover{
+    transform: scale(1.2);
+	transition-property: all;
+    transition-duration: 200ms;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+	cursor: pointer;
+}
