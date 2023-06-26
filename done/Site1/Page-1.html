@@ -1,237 +1,45 @@
-<html>
+﻿<html>
   <head>
-    <audio id="myAudio" controls style="display:none;">
-        <source src="sound1.mp3" type="audio/mpeg">
-    </audio>
-    <button id="but" onclick="document.getElementById('myAudio').play(),myFunction()">Cảm ơn em</button>
-    <title>Cảm ơn</title>
     <style>
-                #but{
-                  width: 300;
-                  height: 50;
-                  position: absolute;
-                  top: 400;
-                  left: 800;
-                  font-size: 35;
-                  background: linear-gradient(0.35turn, #AEE2FF,#EFC7EB);
-                  border: 1px solid;
-                  border-radius: 10px;
-                  
-                }
-                #but:hover{
-                  cursor: pointer;
-                  color:violet;
-                }
-                html{
-                background: linear-gradient(0.35turn, #AEE2FF,#EFC7EB);
-                justify-content:center;
-                align-items:center;
-                display:flex;
-                font-family:Calibri;
-                }
-                body{
-                margin:0;
-                background:white;
-                width:90%;
-                height:90%;
-                border-radius:15px;
-                overflow:hidden;
-                display:flex;
-                justify-content:flex-start;
-                align-items:center;
-                display:flex;
-                
-                }
-      .fade-in-text {
-        opacity: 0;
-        animation: fade-in 1s ease-in-out forwards;
-        font-size: 35px;
-        background:linear-gradient(0.35turn, #8A9CFF,#F28AC4);
-                -webkit-background-clip: text;
-                color: transparent;
-      }
-      .mev{
-        position: absolute;
-        background:linear-gradient(0.35turn, #8A9CFF,#F28AC4);
-                -webkit-background-clip: text;
-                color: transparent;
-        font-size: 35px;
-        font-weight: bold;
-        left:147;
-        bottom: 122;
-
-      }
-      @keyframes fade-in {
-        0% {
-          opacity: 0;
+       
+    html{
+    background: linear-gradient(0.35turn, #AEE2FF,#EFC7EB);
+    justify-content:center;
+    align-items:center;
+    display:flex;
+    font-family:Calibri;
+    }
+        body {
+            margin: 0;
+            background: white;
+            width: 90%;
+            height: 90%;
+            border-radius: 15px;
+            overflow: hidden;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        100% {
-          opacity: 1;
-        }
-      }
-      #text-container{
-        margin-left: 50px;
-      }
-      #pm{
-        position: absolute;
-        left:147;
-        bottom: 100;
-      }
-      .hidden {
-      display: none;
-      }
-      .s{
-        position: absolute;
-        opacity: 0; 
-       transition: opacity 3s ease-in-out;
-      }
-      .ds{
-        right: 200px;
-        bottom: 80px;
-        border: 1px solid violet;
-      }
-      .cs{
-        right:180px;
-        top:100px;
-      }
-      .bs{
-        right:500px;
-        top:250px;
-        z-index: 2; 
-      }
-      .as{
-        right:450px;
-        top:80px;
-        z-index: 1;
-      }
-      #pm{
-        font-size: 18;
-        color: black;
-      }
-      .aa{
-        left:147;
-        position: absolute;
-        top:100px;
-        font-size: 30px;
-        font-weight: bold; 
-        color: blue; 
-      }
-      #tsn:hover{
-        color: violet;
-        cursor: pointer;
-      }
-      #tsn{
-        background: linear-gradient(0.35turn, #AEE2FF,#EFC7EB);
-                  border: 1px solid;
-                  color: #000;
-        width:300px;
-        height: 50px;
-        justify-content: center;
-        text-align: center;
-        text-decoration: none;
-        border-radius: 10px;
-        border: 1px solid black;
-        font-size: 21px;;
-      }
+   .ok{
+       text-align:center;
+       font-size:60px;
+   }
     </style>
   </head>
   <body>
-    <div id="text-container"></div>
-    <div class="mev">Mong em vui...</div>
-    <div id="pm"><a href="https://www.instagram.com/beo_lu_.z/reels/">https://www.instagram.com/beo_lu_.z/reels/</a></div>
-    <img class="s as" src="images/s1.jpg" width="150px;" id="s1">
-    <img class="s bs" src="images/s2.jpg" width="350px;" id="s2">
-    <img class="s cs" src="images/s3.jpg" width="300px;" id="s3">
-    <img class="s ds" src="images/s4.jpg" width="250px;" id="s4">
-    <a class="aa" href="BirthDay.html"><button id="tsn">VỀ TRANG SINH NHẬT</button></a>
-  </body>
-  <script>
-    function myFunction() {
-      
-        document.querySelector("button").style.display = "none";
-    const textArray = [
-      "Trưởng thành hơn",
-      ", thành công hơn",
-      "\nRồi em quên rằng em cần",
-      " những gì",
-      "\nLà một mái nhà?",
-      " Hẹn hò trăng hoa?",
-      " Cuộc tình tay ba?",
-      " ....",
-      "\nỪ anh sai",
-      ", mời em đi",
-      "\nTìm một nơi mà em là chính mình",
-      "\nĐừng minh chứng rằng",
-      ", mình không có tội",
-      "\nTội của em, phản bội yêu thương",
-      "\nNhường em đi trước",
-      ", đừng xin lỗi nữa",
-      "\nLời xin lỗi ... nói ra càng sai",
-      "\nHạnh phúc với người",
-      ", mà không biết dừng",
-      " ",
-      "\nNgọt đến đâu cũng thành đắng cay",
-      "\nNhiều khi anh ước",
-      ", mình không quen biết",
-      "\nĐể anh đỡ tiếc thêm thời gian",
-      "\nNgần ấy thất vọng",
-      ", tràn dâng đến họng",
-      "\nChỉ biết thốt lên vài câu thôi....",
-
-    ];
-    let currentTextIndex = 0;
-    const textContainer = document.getElementById("text-container");
-    let previousElements = [];
-    const intervalId = setInterval(() => {
-      const currentText = textArray[currentTextIndex];
-      const newElement = document.createElement("span");
-      newElement.classList.add("fade-in-text");
-      newElement.innerText = currentText;
-      textContainer.appendChild(newElement);
-      previousElements.push(newElement);
-      if (previousElements.length > 1) {
-        const previousElement = previousElements.shift();
+      <div class="ok">
+          <div>Nếu không sống được là một người tử tế thì đừng sống lỗi với những người từng tốt với mình và bao dung mình. </div>
+          <div>Xin hãy sống là một con người có trách nhiệm và không chạy trốn nó nữa, vì cuộc đời này chả có ai dễ dàng bỏ qua tất cả nữa đâu.</div>
+          <div> Cảm ơn.</div>
+         
+      </div>
     
-      }
-      currentTextIndex++;
-      if (currentTextIndex >= textArray.length) {
-        
-        clearInterval(intervalId);
-      }
-    }, 2700);
-    var s1 = document.getElementById("s1");
-      var s2 = document.getElementById("s2");
-      var s3 = document.getElementById("s3");
-      var s4 = document.getElementById("s4");
       
-      setTimeout(function() {
-  s3.style.opacity = '1';
-}, 90000);
-setTimeout(function() {
-  s1.style.opacity = '1';
-}, 100000);
-setTimeout(function() {
-  s2.style.opacity = '1';
-}, 110000);
-setTimeout(function() {
-  s4.style.opacity = '1';
-}, 120000);
-    setTimeout(function() {
-      tsn.classList.add("fade-in-text");
-    tsn.classList.remove("hidden");
-}, 160000);
 
-    setTimeout(function() {
-      div.classList.add("fade-in-text");
-    div.classList.remove("hidden");
-    }, 90000);
-}
-  </script>
-  <script>
-    var div = document.getElementById("pm");
-    div.classList.add("hidden");
-    var tsn = document.getElementById("tsn");
-      tsn.classList.add("hidden");
-  </script>
+  </body>
+
  
 </html>
