@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+
+
+
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-size: cover;
+  background-image: url("https://cdn.sforum.vn/sforum/wp-content/uploads/2022/12/hinh-nen-may-tinh-tet-4.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.paper {
+  background-image: url("https://i.pinimg.com/736x/7e/0b/93/7e0b9393a594c8aaf023dbe3a4df6c4f.jpg");
+  background-size: 500px;
+  background-position: center center;
+  padding: 20px 100px;
+/*  min-width: 800px; */
+  
+  transform: rotateZ(-5deg);
+  box-shadow: 1px 15px 20px 0px rgba(0,0,0,0.5);
+  
+  position: absolute;
+}
+.paper:hover{
+  cursor: pointer;
+}
+.paper.heart {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.paper.image {
+  padding: 10px;
+  max-width: 300px;
+
+}
+.paper.image.red {
+  padding: 10px;
+  max-width: 300px;
+
+}
+.paper.image p {
+  font-size: 30px;
+  
+}
+.paper.image.coup{
+  max-width: 400px;
+}
+img {
+  max-width: 100%;
+  user-select: none;
+}
+
+.paper.heart::after {
+  content: "";
+  background-image: url('https://cdn.pixabay.com/photo/2016/03/31/19/25/cartoon-1294994__340.png');
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: 150px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+}
+
+p {
+  font-family: 'SVN-Cherryla' ,sans-serif;
+  font-size: 50px;
+  color: rgb(255, 255, 255);
+  opacity: 0.75;
+  user-select: none;
+  
+  filter: drop-shadow(2px 1.5px 1px rgba(0,0,105,0.9));
+}
+@font-face {
+  font-family: '1FTV-White-Pinky'; /* Tên font mà bạn muốn sử dụng */
+  src: url('./images/1FTV-White-Pinky.otf') format('otf');
+
+  /* Thêm định dạng font khác nếu cần */
+  font-weight: normal; /* hoặc bold */
+  font-style: normal; /* hoặc italic */
+}
