@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myne</title>
+</head>
+<body>
+    <div class="left">
+        <h3>Happy Valentine Day Myne Love 🎉 🎉 🎉 </h3>
+        <div class="button" onclick="turnOffLights()">Tắt đèn</div>
+        <div id="subtitle-container"></div>
+    </div>
+   <div class="container"></div>
+</body>
+</html>
+<style>
+     #subtitleContainer {
+            display: none;
+        }
+    body{
+      
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+    h3{
+        margin-bottom: 10px;
+    }
+    .left
+    {
+        width: 50%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        font-size: 30px;
+        flex-direction: column;
+    }
+    .container{
+        font-size: 45px;
+        display: flex;
+        background-position: center;
+        background-image: url("images/myne.png");
+        overflow: hidden;
+        -webkit-background-clip: text;
+        background-repeat: no-repeat;
+        -webkit-text-fill-color: rgba(255,9,9,0);
+        background-size: contain;
+        height: 100vh;
+       width: 50%;
+       line-height: 1.0;
+    }
+    .button {
+        align-items: center;
+        background-color: #fee6e3;
+        border: 2px solid #111;
+        border-radius: 8px;
+        box-sizing: border-box;
+        color: #111;
+        cursor: pointer;
+        display: flex;
+        font-family: Inter,sans-serif;
+        font-size: 16px;
+        height: 48px;
+        justify-content: center;
+        line-height: 24px;
+        max-width: 100%;
+        padding: 0 25px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+        .button:after {
+        background-color: #111;
+        border-radius: 8px;
+        content: "";
+        display: block;
+        height: 48px;
+        left: 0;
+        width: 100%;
+        position: absolute;
+        top: -2px;
+        transform: translate(8px, 8px);
+        transition: transform .2s ease-out;
+        z-index: -1;
+    }
+    
+    .button:hover:after {
+        transform: translate(0, 0);
+    }
+
+    .button:active {
+        background-color: #ffdeda;
+        outline: 0;
+    }
+
+    .button:hover {
+        outline: 0;
+    }
+
+    @media (min-width: 768px) {
+    .button {
+        padding: 0 40px;
+    }
+    }
+    body.dark {
+            background-color: black;
+            color: white;
+        }
+  
+</style>
+<script>
+    var container = document.querySelector('.container');
+    var printCount = 1000;
+
+    for (var i = 0; i < printCount; i++) {
+        container.innerHTML += ' I LOVE YOU MYNE LUV';
+    }
+
+    function turnOffLights() {
+        // Ẩn phần .left
+        var leftElement = document.querySelector('.left');
+        leftElement.style.display = 'none';
+       
+        // Lấy phần tử container để thay đổi font size
+        var container = document.querySelector('.container');
+        container.style.width='100%';
+        // Thực hiện việc giảm font size dần trong khoảng thời gian 5 giây
+        var fontSize = 50; // Font size ban đầu
+        var targetFontSize = 10; // Font size mục tiêu
+        var duration = 50000; // Thời gian giảm font size (ms)
+        var interval = 50; // Khoảng thời gian giữa các bước (ms)
+        var steps = duration / interval;
+        var fontSizeStep = (fontSize - targetFontSize) / steps;
+
+        var counter = 0;
+        var fontSizeInterval = setInterval(function () {
+            fontSize -= fontSizeStep;
+            container.style.fontSize = fontSize + 'px';
+            counter++;
+
+            // Kiểm tra xem đã đạt đến font size mục tiêu chưa
+            if (counter >= steps) {
+                clearInterval(fontSizeInterval);
+            }
+        }, interval);
+
+        // Tiếp tục phần còn lại của hàm
+        document.body.classList.toggle('dark');
+        var button = document.querySelector('.button');
+        button.style.display = 'none';
+
+        // Sử dụng đối tượng Audio đã tạo
+        var audio = new Audio('audio/mrtt.mp3');
+        audio.play();
+
+        // Thêm hàm nhận file SRT và hiển thị sub
+        loadSubtitle('audio/mrtt.srt', audio);
+    }
+
+
+
+</script>
